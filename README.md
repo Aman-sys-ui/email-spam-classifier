@@ -1,77 +1,70 @@
 # 📧 Email Spam Classifier
 
-This is an **end-to-end Machine Learning project** that classifies emails/SMS as **Spam** or **Ham (Not Spam)**.  
-The project includes data preprocessing, model training, evaluation, and deployment using **Flask** (Heroku-ready).
+An **end-to-end Machine Learning project** that classifies emails and SMS messages as **Spam** or **Ham (Not Spam)**. It covers the complete workflow — from text preprocessing and model training to deployment via a **Flask web application** (Heroku-ready).
 
 ---
 
-## Features
-- Dataset preprocessing (stopwords removal, stemming, tokenization)
-- Feature extraction using **CountVectorizer / TF-IDF**
-- Model training and saving (`model.pkl`, `vectorizer.pkl`)
-- Interactive prediction through a **Flask web app**
-- Ready for deployment on **Heroku**
+##  Features
+- Text preprocessing (stopword removal, stemming, tokenization)
+- Feature extraction using **CountVectorizer** / **TF-IDF**
+- Model training and serialization (`model.pkl`, `vectorizer.pkl`)
+- Real-time message classification through a **Flask web interface**
+- Seamless deployment support for **Heroku**
 
 ---
 
 ## Tech Stack
-- **Python**
-- **Libraries:** scikit-learn, pandas, numpy, nltk, flask
-- **Deployment:** Heroku (Procfile & setup.sh included)
+- **Language:** Python  
+- **Libraries:** scikit-learn, pandas, numpy, nltk, flask  
+- **Deployment Platform:** Heroku  
 
 ---
 
 ## 📂 Project Structure
-email-spam-classifier/
-│-- app.py                   # Flask app for deployment
-│-- sms-spam-detection.ipynb # Jupyter notebook for training & EDA
-│-- spam.csv                 # Dataset
-│-- model.pkl                # Trained ML model
-│-- vectorizer.pkl           # TF-IDF/CountVectorizer object
-│-- requirements.txt         # Project dependencies
-│-- Procfile                 # For Heroku deployment
-│-- setup.sh                 # Setup script for deployment
-│-- nltk.txt                 # NLTK resource downloads
+email-spam-classifier/  
+│-- app.py → Flask app for deployment  
+│-- sms-spam-detection.ipynb → Notebook for EDA & model training  
+│-- spam.csv → Dataset used for training  
+│-- model.pkl → Trained machine learning model  
+│-- vectorizer.pkl → Saved CountVectorizer/TF-IDF object  
+│-- requirements.txt → Dependencies list  
+│-- Procfile → Heroku configuration file  
+│-- setup.sh → Deployment setup script  
+│-- nltk.txt → NLTK resource requirements  
 
 ---
 
 ## Usage
+1️ **Clone the repository**  
+git clone https://github.com/Aman-sys-ui/email-spam-classifier.git  
+cd email-spam-classifier  
 
-### 1️⃣ Clone the repository
-git clone https://github.com/Aman-sys-ui/email-spam-classifier.git
-cd email-spam-classifier
+2️ **Install dependencies**  
+pip install -r requirements.txt  
 
-### 2️⃣ Install dependencies
-pip install -r requirements.txt
-
-### 3️⃣ Run locally
-python app.py
-# Open browser at http://127.0.0.1:5000/
-
----
-
-## Deployment on Heroku
-heroku login
-git init
-heroku git:remote -a your-app-name
-git add .
-git commit -m "Deploy spam classifier"
-git push heroku master
+3️ **Run locally**  
+python app.py  
+Then open your browser and navigate to:  
+👉 http://127.0.0.1:5000/
 
 ---
 
-## Results
-Model trained on `spam.csv` dataset with high accuracy ( 86.4 % ).
+
+## 📊 Results
+The model achieved an accuracy of **86.4%** on the `spam.csv` dataset, demonstrating reliable spam detection performance.
 
 ---
 
-## Future Work
-- Improve preprocessing with lemmatization
-- Add deep learning models (LSTM/Transformer)
-- Frontend UI enhancements
+## Future Enhancements
+- Enhance preprocessing using lemmatization  
+- Experiment with deep learning models (LSTM, Transformer)  
+- Improve front-end design for better UX  
 
 ---
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
+---
+
+⭐ **If you found this helpful, consider giving the repo a star!**
